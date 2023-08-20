@@ -1,23 +1,25 @@
 T = int(input())
 for tc in range(1, T+1):
     N, M = map(int, input().split())
-    arr = [list(map(int, input().split())) for _ in range(N)]
+    flowers = [list(map(int, input().split())) for _ in range(N)]
 
-    dr = [1, 0, -1, 0]  # 우, 상, 좌, 하
-    dc = [0, 1, 0, -1]
+    di = [0, 1, 0, -1]  # 우 상 좌 하
+    dj = [1, 0, -1, 0]
 
-    max_v = 0
+    max_flowers = 0
 
-    for r in range(N):
-        for c in range(M):
-            sum_v = 0
+    for i in range(N):
+        for j in range(M):
+            cnt = flowers[i][j]
             for k in range(4):
-                for s in range(1, arr[r][c] + 1):
-                    nr = r + (dr[k] * s)
-                    nc = c + (dc[k] * s)
-                    if 0 <= nr < N and 0 <= nc < M:
-                        sum_v += arr[nr][nc]
-            if max_v < sum_v + arr[r][c]:
-                max_v = sum_v + arr[r][c]
+                for s in range(1, flowers[i][j]+1):
+                    ni = i + di[k]*s
+                    nj = j + dj[k]*s
+                    if 0 <= ni < N and 0 <= nj < M:
+                        cnt += flowers[ni][nj]
 
-    print(f'#{tc} {max_v}')
+            if max_flowers < cnt:
+                max_flowers = cnt
+
+    print(f'#{tc} {max_flowers}')
+
