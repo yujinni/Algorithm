@@ -12,5 +12,5 @@ for tc in range(1, T + 1):
             else:  # 홀수 번째 인덱스에는 작은 값부터 오름차순 정렬되도록
                 if num_list[j] < num_list[i]:
                     num_list[j], num_list[i] = num_list[i], num_list[j]
-    print(f'#{tc}', *num_list[:10])
+    print(f'#{tc}', *num_list[:10])  # 언패킹하여 10개의 숫자 출력
     
