@@ -7,7 +7,7 @@ for tc in range(1, T + 1):
     max_sum = 0  
     min_sum = 10000 * M 
 
-    for i in range(N - M + 1):
+    for i in range(N - M + 1):  # 구간합을 진행하는 횟수
         sub_sum = 0
         for j in range(M):
             sub_sum += num_list[i + j]
