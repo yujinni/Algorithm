@@ -33,7 +33,7 @@ for tc in range(1, T + 1):
             else:  # 오븐에 넣을 피자가 남아있지 않은 경우
                 remain -= 1  # 오븐에 있는 피자를 뺀다.
                 if remain == 0:  # 오븐에 피자를 모두 꺼낸 경우
-                    last_idx = pizza_idx  # 현재 꺼낸 피자 인덱스가 마지막으로 꺼낸 게 된다.
+                    last_idx = pizza_idx  # 현재 꺼낸 피자 인덱스가 마지막으로 꺼낸 피자가 된다.
                     break  # 반복 종료
 
     print(f'#{tc} {last_idx + 1}')
