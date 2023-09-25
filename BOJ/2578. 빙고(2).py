@@ -1,7 +1,7 @@
 import sys
 sys.stdin = open("input.txt", "r")
 
-arr = [list(map(int, input().split())) for _ in range(N)]
+arr = [list(map(int, input().split())) for _ in range(5)]
 lst = []  # 사회자가 부르는 숫자 1차원 배열 생성
 
 for _ in range(5):
