@@ -8,7 +8,7 @@ for _ in range(N):
             paper[r][c] = 1
 
 area = 0  # 색종이가 붙은 영역의 넓이
-for i in range(N):
-    area += paper[i].count(1)
+for i in paper:
+    area += i.count(1)
 
 print(area)
